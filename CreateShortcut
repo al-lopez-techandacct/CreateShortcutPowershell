@@ -1,0 +1,8 @@
+$SysDrive = $Env:SystemDrive
+$TargetFile = https://opus2.paulweiss.com
+$shortcutFile = "$SysDrive\ProgramData\Microsoft\Windows\Start Menu\Programs\Applications\Opus 2.lnk"
+$WScriptShell = New-Object -ComObject WScript.Shell
+$shortcut = $WScriptShell.CreateShortcut($ShortcutFile)
+$shortcut.TargetPath = $TargetFile
+$shortcut.IconLocation = "$SysDrive\SUPPORT\UTILS\Opus2\Opus 2.ico"
+$shortcut.Save() 
